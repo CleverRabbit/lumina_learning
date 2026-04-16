@@ -1,11 +1,36 @@
-<div align="center">
+# Lumina Learning Platform
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+## Deployment Instructions
 
-  <h1>Built with AI Studio</h2>
+This application is designed to be deployed using Docker.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+### Prerequisites
+- Docker
+- Docker Compose
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+### One-Command Deployment
+Run the following command in the root directory:
+```bash
+docker compose up --build
+```
 
-</div>
+### Manual Setup
+1. Install dependencies: `npm install`
+2. Start development server: `npm run dev`
+3. Build for production: `npm run build`
+4. Start production server: `npm run start`
+
+## Architecture
+- **Frontend**: React 19 + Vite + Tailwind CSS 4
+- **Backend**: Express 4 (API Proxy & Static Serving)
+- **State**: Zustand with persistence
+- **AI**: Gemini 2.0 Flash (Native) & OpenRouter (Proxy)
+
+## Features
+- Adaptive learning path
+- Gamified XP and Level system
+- Dynamic lesson generation via LLM
+- Offline mode for manual LLM interaction
+- Learning Diary (System logs)
+- Component self-diagnosis
+- Exportable logs and progress
